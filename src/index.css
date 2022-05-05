@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, h1, h2, h3, h4, h5, h6, p, span, a, ul, li, header, nav, div {
+    color: inherit;
+    text-decoration: none;
+    vertical-align: baseline;
+    list-style-type: none;
+}
+
+@layer components {
+    .app__container {
+        @apply container mx-auto;
+    }
+
+    .link-active {
+        @apply  text-gray-900 border-b-2 border-[#4636DA] transition duration-500 ease-in-out
+    }
+
+    .app__wrapper {
+        @apply  w-full  py-24
+    }
+
+    .about__larger {
+        @apply    rounded-lg lg:hover:shadow-md
+        lg:hover:scale-110 lg:hover:bg-white transition  ease-in-out ;
+    }
+
+    .left-arrow {
+        @apply bg-gray-300  px-6 py-3 absolute top-1/2 left-0 z-40 text-lg
+        rounded-tr-lg rounded-br-lg cursor-pointer
+        text-gray-700 select-none text-gray-400;
+    }
+
+    .right-arrow {
+        @apply bg-gray-300 px-6 py-3 absolute top-1/2 right-0 z-40 text-lg
+        rounded-tl-lg rounded-bl-lg cursor-pointer text-gray-700 select-none;
+    }
+
+    .image-slide {
+        @apply opacity-40 transition duration-1000;
+    }
+
+    .active {
+        @apply opacity-100 transition duration-1000;
+    }
+/*
+
+    */
+
+}
+
+
+
+:root {
+    --primaryDarkBlue: hsl(233, 26%, 24%);
+    --primaryLimeGreen: hsl(136, 65%, 51%);
+    --primaryBrightCyan : hsl(192, 70%, 51%);
+    --secondaryGrayishBlue: hsl(233, 8%, 62%);
+    --secondaryLightGrayishBlue: hsl(220, 16%, 96%);
+    --secondaryLightGray: hsl(0, 0%, 98%);
+    --secondaryWhite: hsl(0,0%,100%);
+
+    --fontSize: 18px;
+    --fontBase: 'Public Sans', sans-serif;
+}
+
+body {
+    background-color: var(--secondaryLightGray);
+    font-family: var(--fontBase);
+    color: #000;
+}
+
+.app__whiteBg {
+    background-color: var(--secondaryWhite);
+}
+.app__lightGrayBg {
+    background-color: var(--secondaryLightGray);
+}
+.app__secGrayBg {
+    background-color: var(--secondaryGrayishBlue);
+}
+
+.app__secLightGrayishBg {
+    background-color: var(--secondaryLightGrayishBlue);
+}
+.app__darkBlueBg {
+    background-color: var(--primaryDarkBlue);
+}
+
+.banner {
+    background-size: cover;
+    background: url("./assets/images/b_g.jpg") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+
+}
+
+
+
