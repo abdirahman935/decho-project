@@ -42,7 +42,7 @@ const Deadline = ({setIsOpen}) => {
                             <div className="px-6 py-2 border-r border-[#2d314d]  w-full ">
                                 <div className=" text-xl mb-5 px-3 font-semibold text-left">
                                 <h2>
-                                    USN Expo
+                                    USN EXPO
                                 </h2>
 
                                 </div>

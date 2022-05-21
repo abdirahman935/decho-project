@@ -12,8 +12,8 @@ const Timeline = () => {
             Bg: 'bg-indigo-500',
             marginTop: 'mt-0',
             leftSide: true,
-            contentDate: '07-12-2022',
-            contentText: 'Project Initial '
+            contentDate: '07-12-2021',
+            contentText: 'Project Initiation '
         },
         {
             Bg: 'bg-amber-500',
@@ -33,15 +33,15 @@ const Timeline = () => {
             Bg: 'bg-sky-400',
             marginTop: 'mt-28',
             rightSide: true,
-            contentDate: '01-04-2022',
-            contentText: 'Second Presentation'
+            contentDate: '14-02-2022',
+            contentText: 'Project Modification'
         },
         {
             Bg: 'bg-violet-400',
             marginTop: 'mt-48',
             leftSide: true,
-            contentDate: '14-02-2022',
-            contentText: 'Project Modification'
+            contentDate: '01-04-2022',
+            contentText: 'Second Presentation'
         },
         {
             Bg: 'bg-pink-500',
