@@ -62,23 +62,22 @@ const teams = [
 const About = () => {
     return (
         <div className={`app__wrapper`}>
-            <div className="app__container text-center  py-12 px-4  ">
+            <div className="app__container text-center  py-6 px-4  ">
                 <h2 className="text-2xl font-semibold">Our Team</h2>
 
-                <div className="flex flex-col lg:flex-row
-                px-4 flex-wrap  mt-8 items-start  lg:justify-start ">
+                <div className="grid__Container">
                     {teams.map((team, index) => (
                         <div className="about__larger 	mr-auto ml-auto  mt-6 duration-700 cursor-pointer mb-6" key={index}>
                             <img
                                 src={team.photo}
                                 alt={team.name}
-                                className="w-56 h-56 object-cover rounded-lg"
+                                className="w-56 h-56 object-cover rounded-lg "
                             />
 
-                            <div className="mt-6">
+                            <div className="mt-6 ">
                                 <h3 className="mb-4 font-semibold">{team.name}</h3>
 
-                                <p className="flex flex-col py-4">
+                                <p className="flex flex-col py-2 px-6">
                                     <>
                                         <span className="text-sm">{team.projectTitle}</span>
                                         {team.title === '' ? null : (
@@ -97,4 +96,4 @@ const About = () => {
         </div>
     )
 }
-export default AppWrap(MotionWrap(About), 'team', "app__lightGrayBg");
+export default AppWrap(MotionWrap(About), 'team', "app__lightGrayBg overflow-hidden");

@@ -2,7 +2,6 @@ import React from "react";
 import MotionWrap from "../../wrapper/MotionWrap";
 import AppWrap from "../../wrapper/AppWrap";
 
-import Bg from '../../assets/images/b_g.jpg'
 
 const ProjectBanner = () => {
     return (
@@ -14,7 +13,7 @@ const ProjectBanner = () => {
                     D.E.C.H.O
                 </h2>
                 <p className="lg:text-xl text-lg">
-                    Data recording of Excavator Canbus for Hydrogen Operation
+                    Data recording of Excavator CAN bus for Hydrogen Operation
                 </p>
 
             </div>
@@ -24,4 +23,4 @@ const ProjectBanner = () => {
 
     )
 }
-export default AppWrap(MotionWrap(ProjectBanner), 'project', '');
+export default AppWrap(MotionWrap(ProjectBanner), 'home', 'overflow-hidden');

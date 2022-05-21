@@ -1,6 +1,7 @@
 import React from 'react'
-import {Project, About, Contact, Testimonial} from "./components";
+import {Project, About, Testimonial, Timeline,  Footer} from "./components";
 import ProjectBanner from "./components/banner";
+
 
 //components
 
@@ -9,16 +10,16 @@ function App() {
 
     return (
 
-        <div className="">
-            {/**project Banner*/}
+        <div className="overflow-hidden ">
+
             <ProjectBanner/>
             <Project/>
+            <Timeline/>
             <About/>
             <Testimonial/>
-            {/**Timeline**/}
-            {/**Contact**/}
-            {/**Footer**/}
-            {/**Deadline**/}
+            <Footer/>
+            {/**
+             */}
 
 
         </div>

@@ -5,7 +5,8 @@ import {BiMenuAltRight} from 'react-icons/bi'
 import {AiOutlineClose} from 'react-icons/ai'
 
 import {motion} from "framer-motion";
-import ProjectBanner from "../banner";
+import Deadline from "../deadline";
+
 
 
 const links = [
@@ -18,17 +19,14 @@ const links = [
         label: 'Project'
     },
     {
-        link: 'team',
-        label: 'Team'
-    },
-    {
         link: 'timeline',
         label: 'Timeline'
     },
     {
-        link: 'contact',
-        label: 'Contact'
-    }
+        link: 'team',
+        label: 'Team'
+    },
+
 ]
 
 
@@ -37,9 +35,13 @@ const Header = () => {
     const [toggle, setShowToggle] = useState(false)
     const [linkActive, setLinkActive] = useState('Home');
 
+    const [isOpen, setIsOpen] = useState(false);
+
+
+
 
     return (
-        <div className="app__whiteBg fixed z-40 left-0 top-0 right-0 ">
+        <div className="app__whiteBg fixed z-40	 left-0 top-0 right-0 ">
             <nav className="app__container flex  items-center justify-between  px-8 py-3">
                 <div className="">
                     <a href="/" className="text-xl">
@@ -64,14 +66,19 @@ const Header = () => {
 
                     <div className="bg-[#2d314d] bg-opacity-75 hover:bg-opacity-100 transition
                     duration-500  px-4 py-2 rounded-full lg:hover:font-bold">
-                        <button style={{color: "#fff"}}>Deadline</button>
+                        <button
+                            style={{color: "#fff"}}
+                            onClick={() => setIsOpen(true)}
+                        >Deadline</button>
                     </div>
+
+                    {isOpen && <Deadline setIsOpen={setIsOpen}/>}
 
                 </div>
 
 
                 {/****Mobile****/}
-                <div className="lg:hidden  inline-block">
+                <div className="lg:hidden  inline-block z-40">
                     {toggle ? (
                         <motion.div
                             className="app__whiteBg shadow-md  w-3/4 h-screen rounded-tl-lg rounded-bl-lg
@@ -110,9 +117,19 @@ const Header = () => {
                                         <span>{item.label}</span>
                                     </a>
                                 ))}
+                                {/**
                                 <div className="bg-[#2d314d] w-28 text-center  px-4 py-2 rounded-full ">
-                                    <button style={{color: "#fff"}}>Deadline</button>
+                                    <button
+                                        style={{color: "#fff"}}
+                                        onClick={() => {
+                                            setIsOpen(true)
+                                            setShowToggle(false)
+                                        }}
+                                    >Deadline</button>
                                 </div>
+
+                                {isOpen && <Deadline setIsOpen={setIsOpen}/>}
+                                 */}
 
                             </div>
 

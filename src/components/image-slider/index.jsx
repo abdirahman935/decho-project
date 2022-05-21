@@ -48,7 +48,7 @@ const ImageSlider = ({slides}) => {
 
 
     return (
-        <div className="lg:w-3/4 w-full h-[550px]   rounded-lg relative
+        <div className="lg:w-3/4 w-full h-[550px] overflow-x-hidden  rounded-lg relative
         flex items-center justify-center group cursor-pointer">
             <motion.div
                 className="left-arrow "
