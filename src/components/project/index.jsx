@@ -9,9 +9,6 @@ import ImageSlider from "../image-slider";
 
 
 
-//data
-import imageData from '../image-slider/imageSliderData'
-
 
 const Project = () => {
     return (
@@ -38,7 +35,7 @@ const Project = () => {
                         </div>
                     </div>
                     {/**image slider */}
-                    <ImageSlider slides={imageData}/>
+                    <ImageSlider />
 
                 </div>
             </div>

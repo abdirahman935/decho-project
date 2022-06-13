@@ -4,9 +4,32 @@ import {motion} from "framer-motion";
 
 import {GrNext, GrPrevious} from 'react-icons/gr'
 
-const ImageSlider = ({slides}) => {
+
+//import images
+import image_1 from '../../assets/sliders/image1.jpg'
+import image_2 from '../../assets/sliders/image2.jpg'
+import image_3 from '../../assets/sliders/image3.png'
+import image_4 from '../../assets/sliders/image4.jpg'
+import image_6 from '../../assets/sliders/image6.jpg'
+import image_7 from '../../assets/sliders/image7.jpg'
+import image_8 from '../../assets/sliders/image8.jpg'
+import image_9 from '../../assets/sliders/image9.jpg'
+
+
+const ImageSlider = () => {
+    const images = [
+        image_1,
+        image_2,
+        image_3,
+        image_4,
+    
+        image_6,
+        image_7,
+        image_8,
+        image_9
+    ]
     const [current, setCurrent] = useState(0)
-    const imageLength = slides.length;
+    const imageLength = images.length;
 
     const autoSlide = true;
     let slideInterval;
@@ -30,7 +53,7 @@ const ImageSlider = ({slides}) => {
 
     }
 
-    if (!Array.isArray(slides) || imageLength <= 0) {
+    if (!Array.isArray(images) || imageLength <= 0) {
         return null;
     }
 
@@ -71,7 +94,7 @@ const ImageSlider = ({slides}) => {
                 <GrNext className="" size={35}/>
             </motion.div>
 
-            {slides.map((slide, index) => (
+            {images?.map((img, index) => (
 
                 <div
                     key={index}
@@ -79,7 +102,7 @@ const ImageSlider = ({slides}) => {
                     {index === current && (
                         <img
 
-                            src={slide.imageUrl}
+                            src={img}
                             alt="Project photos"
                             className="w-full h-full object-cover absolute top-0 left-0 rounded-lg"
                         />
